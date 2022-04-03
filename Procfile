@@ -1,0 +1,1 @@
+web: gunicorn accornic_bk.wsgi --log-file -
