@@ -13,4 +13,4 @@ class BlogContent(models.Model):
     content = MDTextField()
     slug = models.SlugField(max_length = 200)
     created_by = models.CharField(max_length=200,unique=True,blank=False,null=False)
-    created_at = models.DateTimeField(default=datetime.datetime.now())
+    created_at = models.DateTimeField(default=datetime.datetime.now)
