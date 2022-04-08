@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf import settings
-from django.urls import path , include
+from django.urls import path , include, re_path
 from django.conf.urls.static import static
 
 from rest_framework import permissions
@@ -42,6 +42,7 @@ urlpatterns = [
                                  cache_timeout=0), name='schema-swagger-ui'),
     path("redoc", schema_view.with_ui('redoc',
                                       cache_timeout=0), name='schema-redoc'),
+    re_path(r'mdeditor/', include('mdeditor.urls'))
 ]
 
 if settings.DEBUG:

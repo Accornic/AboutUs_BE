@@ -46,6 +46,7 @@ THIRD_PARTY_APPS = [
     'whitenoise.runserver_nostatic',
     'corsheaders',
     'drf_yasg',
+    'mdeditor'
 ]
 
 LOCAL_APPS = [
@@ -150,3 +151,6 @@ MEDIA_URL = '/media/'
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+# MDEditor Settings
+X_FRAME_OPTIONS = 'SAMEORIGIN' 
