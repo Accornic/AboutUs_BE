@@ -47,7 +47,6 @@ THIRD_PARTY_APPS = [
     'corsheaders',
     'drf_yasg',
     'mdeditor',
-    'corsheaders'
 ]
 
 LOCAL_APPS = [
