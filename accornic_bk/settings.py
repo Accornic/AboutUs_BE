@@ -46,7 +46,8 @@ THIRD_PARTY_APPS = [
     'whitenoise.runserver_nostatic',
     'corsheaders',
     'drf_yasg',
-    'mdeditor'
+    'mdeditor',
+    'corsheaders'
 ]
 
 LOCAL_APPS = [
@@ -64,8 +65,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+  'http://localhost:3000',
+  'https://accornic-about.web.app/'
+)
 ROOT_URLCONF = 'accornic_bk.urls'
 
 TEMPLATES = [
